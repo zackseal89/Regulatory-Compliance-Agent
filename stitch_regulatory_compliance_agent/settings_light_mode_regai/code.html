@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a3956",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#14191e",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .active-nav { background-color: #1a3956; color: white; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="h-16 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-between px-8 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="bg-primary text-white p-1.5 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">shield_person</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-primary">RegAI</h2>
+</div>
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="w-full pl-10 pr-4 py-1.5 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm focus:ring-2 focus:ring-primary/20" placeholder="Search settings..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100 rounded-lg transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-100 rounded-lg transition-colors">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+<div class="h-8 w-px bg-slate-200 mx-2"></div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="text-xs font-semibold">Alexander Pierce</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-wider">Executive Admin</p>
+</div>
+<div class="size-9 rounded-full bg-slate-200 border border-slate-300 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Corporate professional headshot for user profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrzM3X2lFQV4jTi_ccl0-PIqgHbpAZ8LWwzs_8LvBBsWBEzUu4HxUUydfEHAH8WkZhZZibDA8UCJ3RL9PaSgJwp8ag9T9ZjA54apOwooPNjZTWgVR06Agj8CBQsABsqtCbn7kx-V2VlGcttOxsVuumVvh2ZZJecops5Z_A0r8RsuMZNYcsed0XCSd0J0mZmAUfuAxIH95jk0IOVoWk0Xl73hI6A8XLCaHqCq4PNXhUoQsbmJTcTzKp_ae5B9iMN1GLD0fmxTip7zc"/>
+</div>
+</div>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 flex flex-col gap-1 overflow-y-auto">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-3 mb-2">Main Menu</p>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">analytics</span>
+<span class="text-sm font-medium">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">corporate_fare</span>
+<span class="text-sm font-medium">Organizations</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">api</span>
+<span class="text-sm font-medium">API Integration</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">notifications_active</span>
+<span class="text-sm font-medium">Alert Protocols</span>
+</a>
+<div class="mt-6"></div>
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-3 mb-2">System</p>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg active-nav shadow-sm transition-all" href="#">
+<span class="material-symbols-outlined text-[22px]">settings</span>
+<span class="text-sm font-bold">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">help_center</span>
+<span class="text-sm font-medium">Support</span>
+</a>
+</aside>
+<!-- Main Content Area (65%) -->
+<main class="flex-1 flex overflow-hidden">
+<div class="w-[65%] flex flex-col overflow-y-auto border-r border-slate-200 dark:border-slate-800 bg-background-light p-8">
+<div class="max-w-2xl mx-auto w-full">
+<div class="mb-8">
+<h1 class="text-3xl font-black tracking-tight text-slate-900">Settings</h1>
+<p class="text-slate-500 mt-1">Manage your enterprise account preferences and system configurations.</p>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Category Cards -->
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex items-center justify-between hover:border-primary transition-colors cursor-pointer ring-1 ring-primary/5">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900">Executive Profile</h3>
+<p class="text-xs text-slate-500">Personal details, role visibility, and access levels</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</div>
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex items-center justify-between hover:border-slate-300 transition-colors cursor-pointer shadow-sm">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-slate-100 flex items-center justify-center text-slate-600">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900">API Integration</h3>
+<p class="text-xs text-slate-500">Manage endpoints, keys, and usage quotas</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</div>
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex items-center justify-between hover:border-slate-300 transition-colors cursor-pointer shadow-sm">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-slate-100 flex items-center justify-center text-slate-600">
+<span class="material-symbols-outlined">webhook</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900">Webhooks</h3>
+<p class="text-xs text-slate-500">Configure callback URLs for automated events</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</div>
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex items-center justify-between hover:border-slate-300 transition-colors cursor-pointer shadow-sm">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-slate-100 flex items-center justify-center text-slate-600">
+<span class="material-symbols-outlined">business</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900">Organizations</h3>
+<p class="text-xs text-slate-500">Manage departmental structures and entities</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</div>
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex items-center justify-between hover:border-slate-300 transition-colors cursor-pointer shadow-sm">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-slate-100 flex items-center justify-center text-slate-600">
+<span class="material-symbols-outlined">policy</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900">Alert Protocols</h3>
+<p class="text-xs text-slate-500">Thresholds for regulatory intelligence triggers</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</div>
+</div>
+<div class="mt-12 p-6 border border-primary/20 bg-primary/5 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-full bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<div>
+<h4 class="font-bold text-primary text-sm">Enterprise Security Active</h4>
+<p class="text-xs text-primary/70 tracking-tight">Your account is secured with RSA-4096 encryption.</p>
+</div>
+</div>
+<button class="px-4 py-2 bg-white border border-primary/20 text-primary text-xs font-bold rounded-lg hover:bg-primary hover:text-white transition-all">Audit Logs</button>
+</div>
+</div>
+</div>
+<!-- Right Configuration Drawer (35%) -->
+<div class="w-[35%] bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-800 flex flex-col overflow-y-auto">
+<div class="p-8 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest">Active Configuration</span>
+<button class="text-slate-400 hover:text-slate-600 transition-colors"><span class="material-symbols-outlined text-lg">close</span></button>
+</div>
+<h2 class="text-2xl font-bold text-slate-900">Executive Profile</h2>
+<p class="text-sm text-slate-500">Configure your professional identity within the RegAI network.</p>
+</div>
+<form class="p-8 flex flex-col gap-6">
+<!-- Text Fields -->
+<div class="space-y-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold text-slate-500 uppercase">Full Name</label>
+<input class="w-full border-slate-200 rounded-lg text-sm focus:border-primary focus:ring-1 focus:ring-primary/20 px-4 py-2.5" type="text" value="Alexander Pierce"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold text-slate-500 uppercase">Corporate Designation</label>
+<input class="w-full border-slate-200 rounded-lg text-sm focus:border-primary focus:ring-1 focus:ring-primary/20 px-4 py-2.5" type="text" value="Chief Regulatory Officer (CRO)"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold text-slate-500 uppercase">Jurisdiction</label>
+<select class="w-full border-slate-200 rounded-lg text-sm focus:border-primary focus:ring-1 focus:ring-primary/20 px-4 py-2.5">
+<option>North America (NA)</option>
+<option>European Union (EU)</option>
+<option>Asia Pacific (APAC)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold text-slate-500 uppercase">Temporal Zone</label>
+<select class="w-full border-slate-200 rounded-lg text-sm focus:border-primary focus:ring-1 focus:ring-primary/20 px-4 py-2.5">
+<option>UTC -05:00 (EST)</option>
+<option>UTC +00:00 (GMT)</option>
+<option>UTC +01:00 (CET)</option>
+</select>
+</div>
+</div>
+</div>
+<div class="h-px bg-slate-100 my-2"></div>
+<!-- Toggle Switches -->
+<div class="space-y-5">
+<label class="text-xs font-bold text-slate-400 uppercase tracking-wider">Preferences &amp; Security</label>
+<div class="flex items-center justify-between group">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-700">Two-Factor Auth (2FA)</span>
+<span class="text-xs text-slate-500">Biometric or hardware key required</span>
+</div>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</div>
+<div class="flex items-center justify-between group">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-700">Intelligence Briefings</span>
+<span class="text-xs text-slate-500">Daily AI-generated regulatory summary</span>
+</div>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</div>
+<div class="flex items-center justify-between group">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-700">Corporate Visibility</span>
+<span class="text-xs text-slate-500">Show profile in internal organizational chart</span>
+</div>
+<div class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</div>
+</div>
+<div class="mt-8 flex items-center gap-3">
+<button class="flex-1 bg-primary text-white py-3 rounded-lg font-bold text-sm hover:bg-slate-800 transition-all shadow-md" type="submit">Update Profile</button>
+<button class="px-6 py-3 bg-slate-50 text-slate-600 rounded-lg font-bold text-sm border border-slate-200 hover:bg-slate-100 transition-all" type="button">Cancel</button>
+</div>
+</form>
+<div class="mt-auto p-8 border-t border-slate-100 bg-slate-50/50">
+<p class="text-[10px] text-slate-400 leading-relaxed uppercase font-semibold">Security ID: REG-AI-0x22F-8A2B<br/>Last Session: 2023-11-24 14:22:11 GMT-5</p>
+</div>
+</div>
+</main>
+</div>
+</body></html>

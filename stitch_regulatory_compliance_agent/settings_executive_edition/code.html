@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RegAI - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1B3A57",
+                        "accent": "#94A3B8",
+                        "background-dark": "#0F1117",
+                        "surface-dark": "#1E222D",
+                        "border-dark": "#2D3343",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.375rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Minimalist professional scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #2D3343; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #1B3A57; }
+    </style>
+</head>
+<body class="bg-background-dark font-display text-slate-200 antialiased h-screen overflow-hidden">
+<div class="flex h-full w-full">
+<!-- Sidebar -->
+<aside class="w-64 flex flex-col border-r border-border-dark bg-background-dark">
+<div class="p-8 flex items-center gap-3">
+<div class="size-7 bg-primary border border-white/10 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-lg">security</span>
+</div>
+<h2 class="text-lg font-bold tracking-tighter uppercase text-slate-100">RegAI</h2>
+</div>
+<nav class="flex-1 px-6 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-400 hover:bg-surface-dark hover:text-slate-100 transition-all border border-transparent hover:border-border-dark" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<span class="text-xs font-semibold uppercase tracking-widest">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-400 hover:bg-surface-dark hover:text-slate-100 transition-all border border-transparent hover:border-border-dark" href="#">
+<span class="material-symbols-outlined text-xl">rss_feed</span>
+<span class="text-xs font-semibold uppercase tracking-widest">Updates Feed</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-400 hover:bg-surface-dark hover:text-slate-100 transition-all border border-transparent hover:border-border-dark" href="#">
+<span class="material-symbols-outlined text-xl">shield</span>
+<span class="text-xs font-semibold uppercase tracking-widest">Compliance</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-400 hover:bg-surface-dark hover:text-slate-100 transition-all border border-transparent hover:border-border-dark" href="#">
+<span class="material-symbols-outlined text-xl">description</span>
+<span class="text-xs font-semibold uppercase tracking-widest">Reports</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded bg-surface-dark text-slate-100 border border-border-dark" href="#">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1">settings</span>
+<span class="text-xs font-semibold uppercase tracking-widest">Settings</span>
+</a>
+</nav>
+<div class="p-6">
+<div class="flex items-center gap-3 p-3 rounded bg-surface-dark border border-border-dark">
+<div class="size-8 rounded overflow-hidden grayscale contrast-125 border border-border-dark">
+<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtm7HLnAr0D1jbMxxm_JWMT_sc6P08nCBROttl5mL1i_sQ4ze-kuoNDbXz3gLvgz_0vW6PKLBnHLDNObK3uFaeBu-WZHj0q7DuX-i5H66AGI05MjGyLkAP2dGgrnBoYgVm_cr9brXL7aN3zvsbWd_cTr7USW__G81yehxBe4jEzr-voe8VisyR4ODD57hCbYlHolSPqwqi23gkAn4pxOXp4Qe-hkhX9FtZR_uBZ9RnOmwJnaSYR_VVq3CsmtEjw_Ibpx6JJAX4GoA"/>
+</div>
+<div class="flex-1 overflow-hidden">
+<p class="text-[10px] font-bold uppercase tracking-widest text-slate-100 truncate">Alex Rivera</p>
+<p class="text-[9px] text-slate-500 uppercase tracking-tighter truncate">Corporate Admin</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Section -->
+<div class="flex-1 flex flex-col min-w-0">
+<!-- Top Header -->
+<header class="h-14 flex items-center justify-between px-8 border-b border-border-dark bg-background-dark">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-0 top-1/2 -translate-y-1/2 text-slate-500 text-lg">search</span>
+<input class="w-full bg-transparent border-none pl-8 pr-4 py-2 text-xs uppercase tracking-widest text-slate-300 placeholder-slate-600 focus:ring-0 outline-none" placeholder="Search system repository..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-slate-500 hover:text-slate-100 transition-colors">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<button class="text-slate-500 hover:text-slate-100 transition-colors">
+<span class="material-symbols-outlined text-xl">help_outline</span>
+</button>
+</div>
+</header>
+<!-- Content Area -->
+<main class="flex-1 flex overflow-hidden">
+<!-- Left Area (60%) - Settings List -->
+<div class="w-[60%] flex flex-col overflow-y-auto bg-background-dark">
+<div class="p-10">
+<h1 class="text-2xl font-light tracking-tight text-slate-100 mb-1">Configuration Center</h1>
+<p class="text-xs uppercase tracking-[0.2em] text-slate-500 font-medium">Enterprise Management Console</p>
+</div>
+<div class="px-10 pb-10 space-y-2">
+<!-- Row 1: API Integration -->
+<div class="group cursor-pointer p-5 bg-surface-dark/50 border border-border-dark hover:bg-surface-dark transition-all flex items-center justify-between">
+<div class="flex items-center gap-5">
+<div class="size-10 bg-background-dark border border-border-dark text-slate-400 flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">api</span>
+</div>
+<div>
+<h3 class="text-sm font-bold uppercase tracking-widest text-slate-200">API Integration</h3>
+<p class="text-[10px] text-slate-500 uppercase tracking-tight">Endpoint connectivity and auth tokens</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-[10px] uppercase tracking-widest font-bold text-slate-500 border border-border-dark px-2 py-1">Active</span>
+<span class="material-symbols-outlined text-slate-600 group-hover:text-slate-300">chevron_right</span>
+</div>
+</div>
+<!-- Row 2: Tinyfish Webhook -->
+<div class="group cursor-pointer p-5 bg-surface-dark/50 border border-border-dark hover:bg-surface-dark transition-all flex items-center justify-between">
+<div class="flex items-center gap-5">
+<div class="size-10 bg-background-dark border border-border-dark text-slate-400 flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">webhook</span>
+</div>
+<div>
+<h3 class="text-sm font-bold uppercase tracking-widest text-slate-200">Tinyfish Webhook</h3>
+<p class="text-[10px] text-slate-500 uppercase tracking-tight">External synchronization relay</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-[10px] uppercase tracking-widest font-bold text-slate-500 border border-border-dark px-2 py-1">Enabled</span>
+<span class="material-symbols-outlined text-slate-600 group-hover:text-slate-300">chevron_right</span>
+</div>
+</div>
+<!-- Additional Category: Profile (Selected state) -->
+<div class="group cursor-pointer p-5 bg-surface-dark border-l-4 border-l-primary border-y-border-dark border-r-border-dark transition-all flex items-center justify-between">
+<div class="flex items-center gap-5">
+<div class="size-10 bg-primary border border-white/5 text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">person</span>
+</div>
+<div>
+<h3 class="text-sm font-bold uppercase tracking-widest text-slate-100">Executive Profile</h3>
+<p class="text-[10px] text-slate-400 uppercase tracking-tight">Credentials and identity parameters</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+</div>
+<!-- Additional Category: Organizations -->
+<div class="group cursor-pointer p-5 bg-surface-dark/50 border border-border-dark hover:bg-surface-dark transition-all flex items-center justify-between">
+<div class="flex items-center gap-5">
+<div class="size-10 bg-background-dark border border-border-dark text-slate-400 flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">corporate_fare</span>
+</div>
+<div>
+<h3 class="text-sm font-bold uppercase tracking-widest text-slate-200">Business Units</h3>
+<p class="text-[10px] text-slate-500 uppercase tracking-tight">Structure and hierarchy management</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-600 group-hover:text-slate-300">chevron_right</span>
+</div>
+</div>
+<!-- Additional Category: Notifications -->
+<div class="group cursor-pointer p-5 bg-surface-dark/50 border border-border-dark hover:bg-surface-dark transition-all flex items-center justify-between">
+<div class="flex items-center gap-5">
+<div class="size-10 bg-background-dark border border-border-dark text-slate-400 flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">notifications_active</span>
+</div>
+<div>
+<h3 class="text-sm font-bold uppercase tracking-widest text-slate-200">Alert Protocols</h3>
+<p class="text-[10px] text-slate-500 uppercase tracking-tight">Notification thresholds and dispatching</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-600 group-hover:text-slate-300">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Area (40%) - Detail Panel -->
+<div class="w-[40%] overflow-y-auto bg-surface-dark border-l border-border-dark flex flex-col">
+<div class="p-8 border-b border-border-dark sticky top-0 bg-surface-dark z-20">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-xs font-bold uppercase tracking-[0.3em] text-slate-400">Section: Identity</h2>
+<button class="p-1 hover:text-white text-slate-500 transition-colors">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative">
+<div class="size-16 border border-border-dark overflow-hidden bg-background-dark grayscale">
+<img alt="Profile" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMI5lieJzst4n-fA9gIKNkkZqIueD0AVhunuyyIF3nArpveT0uuSrg8AG0kF_V3UNTB72s4Bp7_blR-bnqCvTqAB8hRXbxeT2wnBk3bssWgD9r3DIx5-kN6sJvMIi10IlDNPA3HFzcrdpqNLslJ28JEU_ZokbDt7ekNA761Q7qYPRC1zvIVbCzRpEEb_pzSiKmVcGmAv98N5B_T8mb2HoB0xsHBwqReC6dVmqj5Ix8ysiTRaUTgq_xOJdhoHknbMvCavqaEKS7N2I"/>
+</div>
+<button class="absolute -bottom-1 -right-1 size-5 bg-primary text-white flex items-center justify-center border border-white/10">
+<span class="material-symbols-outlined text-[10px]">edit</span>
+</button>
+</div>
+<div>
+<p class="text-lg font-bold tracking-tight text-slate-100">Alex Rivera</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Chief Regulatory Officer</p>
+</div>
+</div>
+</div>
+<div class="p-8 space-y-10">
+<!-- Text Inputs Group -->
+<div class="space-y-6">
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Legal Name</label>
+<input class="w-full bg-background-dark border border-border-dark rounded-none px-4 py-3 text-xs tracking-wide text-slate-300 focus:border-primary focus:ring-0 outline-none" type="text" value="Alex Rivera"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Corporate Designation</label>
+<input class="w-full bg-background-dark border border-border-dark rounded-none px-4 py-3 text-xs tracking-wide text-slate-300 focus:border-primary focus:ring-0 outline-none" type="text" value="Chief Regulatory Officer"/>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Jurisdiction</label>
+<select class="w-full bg-background-dark border border-border-dark rounded-none px-4 py-3 text-xs tracking-wide text-slate-300 focus:border-primary focus:ring-0 outline-none appearance-none cursor-pointer">
+<option>European Union</option>
+<option>North America</option>
+<option>APAC</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Temporal Zone</label>
+<select class="w-full bg-background-dark border border-border-dark rounded-none px-4 py-3 text-xs tracking-wide text-slate-300 focus:border-primary focus:ring-0 outline-none appearance-none cursor-pointer">
+<option>GMT+1 (Berlin)</option>
+<option>EST (New York)</option>
+<option>PST (LA)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Toggles Group -->
+<div class="space-y-6 pt-10 border-t border-border-dark">
+<h3 class="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500">Security Parameters</h3>
+<div class="flex items-center justify-between group">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-slate-300">2FA Authentication</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-tight mt-1">Enhanced biometric/token validation</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-5 bg-background-dark border border-border-dark peer-checked:bg-primary peer-checked:border-primary transition-all after:content-[''] after:absolute after:top-[3px] after:left-[3px] after:bg-slate-400 peer-checked:after:bg-white after:h-3 after:w-3 after:transition-all peer-checked:after:translate-x-5"></div>
+</label>
+</div>
+<div class="flex items-center justify-between group">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-slate-300">Intelligence Briefings</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-tight mt-1">Daily cryptographic summary delivery</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-5 bg-background-dark border border-border-dark peer-checked:bg-primary peer-checked:border-primary transition-all after:content-[''] after:absolute after:top-[3px] after:left-[3px] after:bg-slate-400 peer-checked:after:bg-white after:h-3 after:w-3 after:transition-all peer-checked:after:translate-x-5"></div>
+</label>
+</div>
+<div class="flex items-center justify-between group">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-slate-300">Corporate Visibility</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-tight mt-1">Public listing in organizational node</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-5 bg-background-dark border border-border-dark peer-checked:bg-primary peer-checked:border-primary transition-all after:content-[''] after:absolute after:top-[3px] after:left-[3px] after:bg-slate-400 peer-checked:after:bg-white after:h-3 after:w-3 after:transition-all peer-checked:after:translate-x-5"></div>
+</label>
+</div>
+</div>
+<!-- Actions -->
+<div class="pt-6 flex gap-4">
+<button class="flex-1 bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] py-4 border border-white/5 hover:bg-slate-800 transition-colors">Commit Changes</button>
+<button class="flex-1 border border-border-dark text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em] py-4 hover:bg-background-dark hover:text-slate-300 transition-colors">Discard</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

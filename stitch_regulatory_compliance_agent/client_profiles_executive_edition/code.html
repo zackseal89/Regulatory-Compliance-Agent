@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RegAI - Client Profiles</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1B3A57",
+                        "accent-silver": "#94A3B8",
+                        "background-dark": "#0F1117",
+                        "surface-dark": "#1E222D",
+                        "border-subtle": "#2D3441",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { 
+                        "DEFAULT": "0.125rem", 
+                        "lg": "0.25rem", 
+                        "xl": "0.375rem", 
+                        "full": "9999px" 
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.01em;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2D3441;
+        }
+        input, select, textarea {
+            transition: all 0.2s ease;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-slate-200 antialiased overflow-hidden">
+<div class="flex h-screen w-full">
+<!-- Sidebar -->
+<aside class="w-64 border-r border-border-subtle flex flex-col bg-background-dark shrink-0">
+<div class="p-8 flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[20px]">security</span>
+</div>
+<div>
+<h1 class="text-sm font-bold leading-tight tracking-wider uppercase">RegAI</h1>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest font-medium">Intelligence</p>
+</div>
+</div>
+<nav class="flex-1 px-4 py-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-2 text-slate-400 hover:text-white hover:bg-surface-dark rounded transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">dashboard</span>
+<span class="text-xs font-semibold uppercase tracking-wider">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-400 hover:text-white hover:bg-surface-dark rounded transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">rss_feed</span>
+<span class="text-xs font-semibold uppercase tracking-wider">Updates Feed</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 bg-primary text-white rounded transition-colors shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px]">group</span>
+<span class="text-xs font-semibold uppercase tracking-wider">Client Profiles</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-400 hover:text-white hover:bg-surface-dark rounded transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">bar_chart</span>
+<span class="text-xs font-semibold uppercase tracking-wider">Reports</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-400 hover:text-white hover:bg-surface-dark rounded transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+<span class="text-xs font-semibold uppercase tracking-wider">Settings</span>
+</a>
+</nav>
+<div class="p-6 border-t border-border-subtle">
+<div class="flex items-center gap-3 p-2">
+<div class="w-8 h-8 rounded bg-slate-800 overflow-hidden border border-border-subtle grayscale">
+<img alt="User Profile" data-alt="Professional headshot of a user" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhkQi1ECMsTZRVTKYsAm-QzsXYeXv3LQPyxA0qeeUSx7eZx4Q-PZPNf0FF6FgvavZuGeOwgI5XQUQy6dvJXdAvAY8q1cK03qbglOMx5EtiDfICmL6-E9tGTUz_06dN1vgzCZ2rfmlEbRjjT9an3cXDx-UkmucflWnvUTa0wFmj8m2mDsyfKypUpl2ihVliNMMRZ8_0nXHM3ypKHKetMgQNwvP1GFDCqMhyz8w7-zeVKQFBYQMZqHm-KF8gmsNLFFy6JsKGofi5a2k"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-bold truncate">Alex Chen</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-tighter">Compliance Officer</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Wrapper -->
+<main class="flex-1 flex flex-col min-w-0 bg-background-dark">
+<!-- Header -->
+<header class="h-16 border-b border-border-subtle flex items-center justify-between px-8 bg-background-dark">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-500 text-[20px]">group</span>
+<h2 class="text-xs font-bold uppercase tracking-widest text-slate-300">Client Profiles</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary hover:bg-[#254d72] text-white px-4 py-2 rounded text-[11px] font-bold uppercase tracking-widest flex items-center gap-2 transition-all border border-transparent shadow-sm">
+<span class="material-symbols-outlined text-[14px]">add</span>
+                    Add Client
+                </button>
+<div class="h-4 w-[1px] bg-border-subtle mx-2"></div>
+<button class="text-slate-500 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+</div>
+</header>
+<div class="flex-1 flex overflow-hidden">
+<!-- List Section -->
+<div class="flex-1 flex flex-col overflow-y-auto custom-scrollbar p-10">
+<!-- Search Bar -->
+<div class="mb-10 max-w-2xl">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-[18px]">search</span>
+<input class="w-full bg-surface-dark border border-border-subtle rounded py-3 pl-12 pr-4 focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all placeholder:text-slate-600 text-sm" placeholder="SEARCH CLIENTS, INDUSTRIES OR TAGS..." type="text"/>
+</div>
+</div>
+<!-- Client Cards -->
+<div class="grid grid-cols-1 @container gap-4">
+<!-- Card 1 -->
+<div class="flex flex-col @xl:flex-row items-stretch rounded overflow-hidden border border-border-subtle bg-surface-dark hover:border-slate-600 transition-colors group">
+<div class="w-full @xl:w-60 h-48 @xl:h-auto overflow-hidden relative border-r border-border-subtle">
+<img alt="Acme Fintech" class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 transition-opacity duration-500" data-alt="Abstract fintech digital visualization with blue gradients" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr5cOlfQooc4Rt24n3WBClwNm6gA8l4G5pHo0032xEzCHr8WnxEj6Jp7Xp4QGQbNwsrfIGECR-Td8XqkwfzLnItaMfx4FwW2bwA1mpD6TmAbpkxClxEJFr1U34XX1VgNPKw5bfS4VG2J3RSNufQpaPptmzN2KYzpxu7ZgjIOUuh96LMbewD9EqsKprM62He9LSsvOHV7fU_oJ-2hjxDDQ7EMsaoqh14nRdH6IxhNX4nCeOFxQzuisDP6JTue3GDHZvz_XBICPowYE"/>
+<div class="absolute bottom-3 left-3">
+<span class="px-2 py-0.5 bg-primary text-[9px] font-bold text-white rounded-sm uppercase tracking-tighter">Active</span>
+</div>
+</div>
+<div class="flex-1 p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-base font-bold uppercase tracking-wide">Acme Fintech</h3>
+<button class="text-slate-600 hover:text-slate-200">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+<p class="text-[11px] text-slate-500 uppercase tracking-widest mb-4 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">category</span>
+                                    Industry: Fintech
+                                </p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 border border-border-subtle text-slate-400 rounded-sm text-[10px] font-semibold tracking-wider">DCP</span>
+<span class="px-2 py-1 border border-border-subtle text-slate-400 rounded-sm text-[10px] font-semibold tracking-wider">AML</span>
+<span class="px-2 py-1 border border-border-subtle text-slate-400 rounded-sm text-[10px] font-semibold tracking-wider">KYC</span>
+</div>
+</div>
+<div class="flex justify-end pt-4 border-t border-border-subtle">
+<button class="flex items-center gap-1 text-slate-400 text-[10px] uppercase font-bold tracking-widest hover:text-white transition-all">
+                                    Edit Profile
+                                    <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col @xl:flex-row items-stretch rounded overflow-hidden border border-border-subtle bg-surface-dark hover:border-slate-600 transition-colors group">
+<div class="w-full @xl:w-60 h-48 @xl:h-auto overflow-hidden relative border-r border-border-subtle">
+<img alt="TelCo Kenya" class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 transition-opacity duration-500" data-alt="Satellite towers and communication network visual" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJTk9EMVTO4oD0df_phODqv7fjpnxzU9_iUrtjj-aYgczyoFbNlw4KdVnp_OKauw9thfIPya24Xx4uHT3RWkKQyJaU42LJUeI_baXPzWwjlqn0qmZdfEDmJ-oODzCC22ph-U-tF8RbBEwJoYdfi4-kAIfCW5xjxQbbwNzoTSfztTe-I4eoCoXW9cdQqdO4-LhdALpUvPlW8v3m9lh7NePPk_OlA8Hmh93xGoJIrzLeCRPYUt-VM5QBzxerJuxMFZoogoEah5tiAXQ"/>
+<div class="absolute bottom-3 left-3">
+<span class="px-2 py-0.5 bg-slate-700 text-[9px] font-bold text-white rounded-sm uppercase tracking-tighter">Review Needed</span>
+</div>
+</div>
+<div class="flex-1 p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-base font-bold uppercase tracking-wide">TelCo Kenya</h3>
+<button class="text-slate-600 hover:text-slate-200">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+<p class="text-[11px] text-slate-500 uppercase tracking-widest mb-4 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">category</span>
+                                    Industry: Telecom
+                                </p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 border border-border-subtle text-slate-400 rounded-sm text-[10px] font-semibold tracking-wider">Data</span>
+<span class="px-2 py-1 border border-border-subtle text-slate-400 rounded-sm text-[10px] font-semibold tracking-wider">License</span>
+</div>
+</div>
+<div class="flex justify-end pt-4 border-t border-border-subtle">
+<button class="flex items-center gap-1 text-slate-400 text-[10px] uppercase font-bold tracking-widest hover:text-white transition-all">
+                                    Edit Profile
+                                    <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Edit Profile Drawer -->
+<aside class="w-[400px] border-l border-border-subtle bg-surface-dark flex flex-col overflow-hidden shadow-2xl">
+<div class="p-6 border-b border-border-subtle flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</div>
+<h3 class="text-xs font-bold uppercase tracking-widest">Edit Profile</h3>
+</div>
+<button class="p-1 hover:bg-background-dark rounded text-slate-500">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex-1 p-8 overflow-y-auto custom-scrollbar">
+<form class="space-y-8">
+<div>
+<label class="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2.5">Company Name</label>
+<input class="w-full bg-background-dark border border-border-subtle rounded p-3 text-xs focus:ring-1 focus:ring-primary focus:border-primary outline-none font-medium text-slate-200" type="text" value="Acme Fintech"/>
+</div>
+<div>
+<label class="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2.5">Industry</label>
+<div class="relative">
+<select class="w-full bg-background-dark border border-border-subtle rounded p-3 text-xs focus:ring-1 focus:ring-primary focus:border-primary outline-none appearance-none font-medium text-slate-200">
+<option>Fintech</option>
+<option>Telecom</option>
+<option>Retail</option>
+<option>Manufacturing</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2.5">Compliance Requirements</label>
+<div class="bg-background-dark border border-border-subtle rounded p-3 min-h-[120px] focus-within:ring-1 focus-within:ring-primary transition-all">
+<div class="flex flex-wrap gap-2 mb-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-1 bg-primary text-white rounded-sm text-[9px] font-bold tracking-wider uppercase">
+                                        DCP
+                                        <span class="material-symbols-outlined text-[10px] cursor-pointer opacity-70 hover:opacity-100">close</span>
+</span>
+<span class="inline-flex items-center gap-1.5 px-2 py-1 bg-primary text-white rounded-sm text-[9px] font-bold tracking-wider uppercase">
+                                        AML
+                                        <span class="material-symbols-outlined text-[10px] cursor-pointer opacity-70 hover:opacity-100">close</span>
+</span>
+<span class="inline-flex items-center gap-1.5 px-2 py-1 bg-primary text-white rounded-sm text-[9px] font-bold tracking-wider uppercase">
+                                        KYC
+                                        <span class="material-symbols-outlined text-[10px] cursor-pointer opacity-70 hover:opacity-100">close</span>
+</span>
+</div>
+<input class="bg-transparent border-none p-0 w-full text-[11px] focus:ring-0 outline-none placeholder:text-slate-700" placeholder="TYPE AND PRESS ENTER..." type="text"/>
+</div>
+</div>
+<div class="pt-6 space-y-3">
+<button class="w-full bg-primary text-white py-3.5 rounded text-[11px] font-bold uppercase tracking-widest hover:bg-[#254d72] transition-colors border border-transparent" type="button">
+                                Save Changes
+                            </button>
+<button class="w-full bg-transparent border border-border-subtle text-slate-400 py-3.5 rounded text-[11px] font-bold uppercase tracking-widest hover:bg-background-dark hover:text-white transition-colors" type="button">
+                                Cancel
+                            </button>
+</div>
+</form>
+<div class="mt-12 pt-10 border-t border-border-subtle">
+<h4 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-6">Recent Activity</h4>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"></div>
+<p class="text-[11px] leading-relaxed text-slate-400 font-medium">
+<span class="font-bold text-slate-200">SYSTEM</span> UPDATED KYC REQUIREMENTS FOR CENTRAL BANK COMPLIANCE.
+                                    <span class="block text-[9px] mt-1.5 text-slate-600 font-bold tracking-tighter">2 HOURS AGO</span>
+</p>
+</div>
+<div class="flex gap-4">
+<div class="w-1 h-1 rounded-full bg-slate-700 mt-1.5 shrink-0"></div>
+<p class="text-[11px] leading-relaxed text-slate-400 font-medium">
+<span class="font-bold text-slate-200">ALEX CHEN</span> EDITED PROFILE TAGS.
+                                    <span class="block text-[9px] mt-1.5 text-slate-600 font-bold tracking-tighter">YESTERDAY, 4:12 PM</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RegAI Dashboard | Legal Compliance Executive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1B3A57", // Executive Navy
+                        "accent-silver": "#94A3B8",
+                        "background-dark": "#0F1117", // Deep Charcoal
+                        "surface": "#1E222D", // Solid Surface
+                        "border-subtle": "#2D3343", // Subtle Border
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px", // Sharp, clean lines
+                        "lg": "2px",
+                        "xl": "4px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20;
+        }
+        .active-nav {
+            background-color: #1B3A57;
+            color: white;
+        }
+        /* Strip all glow effects */
+        * { box-shadow: none !important; text-shadow: none !important; }
+        /* Clinical precision borders */
+        .border-elegant { border: 1px solid #2D3343; }
+    </style>
+</head>
+<body class="bg-background-dark text-slate-300 font-display">
+<div class="flex min-h-screen overflow-hidden">
+<!-- Left Sidebar -->
+<aside class="w-[260px] fixed inset-y-0 left-0 bg-[#0A0C10] border-r border-border-subtle flex flex-col z-50">
+<div class="p-8 flex items-center gap-3">
+<div class="border border-slate-700 size-7 flex items-center justify-center text-slate-300">
+<span class="material-symbols-outlined text-lg">balance</span>
+</div>
+<h1 class="text-lg font-bold tracking-[0.15em] text-white uppercase">RegAI</h1>
+</div>
+<nav class="flex-1 px-6 space-y-2 mt-4">
+<a class="flex items-center gap-4 px-3 py-2 text-white active-nav" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-xs font-semibold tracking-wider uppercase">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-2 text-slate-500 hover:text-slate-200 transition-colors" href="#">
+<span class="material-symbols-outlined">rss_feed</span>
+<span class="text-xs font-semibold tracking-wider uppercase">Updates Feed</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-2 text-slate-500 hover:text-slate-200 transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-xs font-semibold tracking-wider uppercase">Risk Analysis</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-2 text-slate-500 hover:text-slate-200 transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-xs font-semibold tracking-wider uppercase">Entities</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-2 text-slate-500 hover:text-slate-200 transition-colors" href="#">
+<span class="material-symbols-outlined">folder_managed</span>
+<span class="text-xs font-semibold tracking-wider uppercase">Archive</span>
+</a>
+</nav>
+<div class="p-6 border-t border-border-subtle mt-auto">
+<div class="flex items-center gap-3 px-2 py-3">
+<div class="size-9 border border-border-subtle grayscale opacity-80">
+<img class="w-full h-full object-cover" data-alt="Professional user portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw5kQgEX_qFfi5Q1KeYsvqY7b4gOwhF1lxjxp7vbRs-Ksup7syo16WnxQwasv_D00-ZVF089ppgOkRG9uAjNIlIhf2dwSrF4IDGMzqALLzw8Aqe6UtUSOG-QNTVKwJoPVTOOxciiGg7CfEA2iXb1wS6JNURdt7srW8i47U93LcqcHfR0ZgxBqgVLPBw96hjcWefPWfD3igr4Rqxr8PphfMFziNqzqZnZ6utC7D9v91zCmzYzv8UgjmhGLkBg2tb_1FbAWaQ571R2s"/>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-white uppercase tracking-tight">Alex Rivera</span>
+<span class="text-[10px] text-slate-500 uppercase tracking-widest">Counsel</span>
+</div>
+</div>
+<button class="flex items-center gap-2 w-full mt-2 px-3 py-2 text-slate-500 hover:text-white text-[10px] uppercase font-bold tracking-widest transition-colors">
+<span class="material-symbols-outlined text-sm">logout</span>
+                Logout
+            </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 ml-[260px] flex flex-col min-h-screen">
+<!-- Header -->
+<header class="h-20 flex items-center justify-between px-10 bg-background-dark border-b border-border-subtle sticky top-0 z-40">
+<div class="flex items-center gap-12">
+<h2 class="text-sm font-bold text-white tracking-[0.2em] uppercase">Executive Overview</h2>
+<div class="relative w-72">
+<span class="material-symbols-outlined absolute left-0 top-1/2 -translate-y-1/2 text-slate-500 text-sm">search</span>
+<input class="w-full bg-transparent border-none py-2 pl-8 pr-4 text-xs text-slate-200 focus:ring-0 placeholder:text-slate-600 font-medium" placeholder="SEARCH REGULATORY DATABASE..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="border border-slate-700 text-slate-300 px-5 py-2 text-[10px] font-bold tracking-widest uppercase hover:bg-slate-800 transition-all">
+                    Generate Report
+                </button>
+<button class="size-10 flex items-center justify-center border border-border-subtle text-slate-500 hover:text-white transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="size-8 border border-border-subtle grayscale opacity-60" data-alt="Small user profile thumbnail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDgMvtZAIUm8exrXDBwHtszpQAMeZT2vBZOoYKAE55VB_qO69fHVbebVqO4AdEFPw6Ox1Ob9Oyg9gpDB2eQLpv141XkGsjj0qu3KU1ywUFcpvYl6KPSeQhGIPoqEtBzOo23M1aCrrOMW1Dh-7jd-P2oxb-sH9raMBhFFurLiMDSWu_TBmCOkJRlOosr4WKDJ1a9bCy-vMaogGzvf01V1a8fF2LWyo_YaFXJ2Xe8dfPhbwXb524uPSiQL_fWd91cFxM7W09x5IQNQeg'); background-size: cover;"></div>
+</div>
+</header>
+<!-- Content -->
+<div class="p-10 space-y-10 max-w-[1400px]">
+<!-- Stats Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border-y border-border-subtle divide-x divide-border-subtle">
+<div class="bg-surface p-8">
+<p class="text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-4">Daily Updates</p>
+<div class="flex items-baseline justify-between">
+<h3 class="text-4xl font-light text-white leading-none">12</h3>
+<span class="text-slate-400 text-[10px] font-bold">+20%</span>
+</div>
+</div>
+<div class="bg-surface p-8">
+<p class="text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-4">High Priority</p>
+<div class="flex items-baseline justify-between">
+<h3 class="text-4xl font-light text-white leading-none">03</h3>
+<span class="text-slate-500 text-[10px] font-bold uppercase">Critical</span>
+</div>
+</div>
+<div class="bg-surface p-8">
+<p class="text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-4">Pending Review</p>
+<div class="flex items-baseline justify-between">
+<h3 class="text-4xl font-light text-white leading-none">05</h3>
+<span class="text-slate-500 text-[10px] font-bold uppercase">Awaiting</span>
+</div>
+</div>
+<div class="bg-surface p-8">
+<p class="text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-4">Active Files</p>
+<div class="flex items-baseline justify-between">
+<h3 class="text-4xl font-light text-white leading-none">08</h3>
+<span class="text-slate-500 text-[10px] font-bold uppercase">Managed</span>
+</div>
+</div>
+</div>
+<!-- Middle Row -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+<!-- Left Panel: Materiality Overview -->
+<div class="lg:col-span-2 space-y-6">
+<div class="flex items-baseline justify-between border-b border-border-subtle pb-4">
+<h2 class="text-xs font-bold text-white uppercase tracking-[0.2em]">Materiality Assessment</h2>
+<button class="text-slate-500 text-[10px] font-bold uppercase hover:text-white transition-colors">Audit All</button>
+</div>
+<div class="space-y-4">
+<!-- Update Card 1 -->
+<div class="bg-surface border border-border-subtle p-6 flex gap-8 hover:bg-[#252a36] transition-colors group">
+<div class="w-40 h-24 bg-cover bg-center grayscale group-hover:grayscale-0 transition-all border border-border-subtle" data-alt="Legal documents" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDy1oAZjgB3kGh4rW6IjprNpqxb99H-SNmfFAxS9OO99WSZTvJKfw8T-y-AzhHVLPy4XYdEe7nE3FF6z70aOOAlL3ky1Nt8dFylsajy8_gzbjddOv5_9g0MQfVgw40s303UagsafHjx5yqKoWbYYwCKoi6aG53BfVuVqzlDOfZJYfH23tLIjeimUAk0vzCL4GeIEtPO5E_xesG--yNCK8Zmbxh643_vy63CUGlNHNl8lzIC8T2aHIQmAmijaojH6Yuf9va_gMkehdU')"></div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="text-[10px] font-bold tracking-widest uppercase text-slate-200 bg-primary px-2 py-0.5">High Impact</span>
+<span class="text-slate-500 text-[10px] uppercase font-bold tracking-widest">SEC Amendment</span>
+</div>
+<h4 class="text-white font-semibold text-base tracking-tight">Rule 204 Reporting Cycle Updates</h4>
+<p class="text-slate-400 text-xs mt-2 leading-relaxed">Mandatory amendment regarding institutional manager reporting cycles. Significant exposure identified.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-slate-600 text-[10px] font-bold uppercase">2 Hours Elapsed</span>
+<button class="text-[10px] font-bold uppercase tracking-widest text-slate-300 hover:text-white flex items-center gap-2">
+                                        Review Case <span class="material-symbols-outlined text-xs">north_east</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Update Card 2 -->
+<div class="bg-surface border border-border-subtle p-6 flex gap-8 hover:bg-[#252a36] transition-colors group">
+<div class="w-40 h-24 bg-cover bg-center grayscale group-hover:grayscale-0 transition-all border border-border-subtle" data-alt="Financial chart" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCAeKrT637bVL1XyzXcL2_b5LLNPyPg0887bCeuXOYfRnTcMu0ZJvTn-Ud7WI-cZZ1LVftTcTNt4zZPzkTc1qczv2KgW8s2gbhvnc-erqn9uYAgV6tUgE8hFX6gUn8h6GO5DQ9S0wBj0Kc2TLs_PsWvwSZ69LRx54xQk0I5Zi95RjWwPZHrbCUPtIgcmbuzVKnBKduWbYQ1wImlfeeVE1UStMjzrmr1X8JDa98CWvQTzVQb32gwE7ubAsNvd29SyQ7I_4IuHd9nzvY')"></div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="text-[10px] font-bold tracking-widest uppercase text-slate-400 border border-slate-700 px-2 py-0.5">Moderate</span>
+<span class="text-slate-500 text-[10px] uppercase font-bold tracking-widest">FINRA Disclosure</span>
+</div>
+<h4 class="text-white font-semibold text-base tracking-tight">Section 13F Filing Thresholds</h4>
+<p class="text-slate-400 text-xs mt-2 leading-relaxed">Proposed changes to disclosure requirements for high-net-worth asset managers.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-slate-600 text-[10px] font-bold uppercase">5 Hours Elapsed</span>
+<button class="text-[10px] font-bold uppercase tracking-widest text-slate-300 hover:text-white flex items-center gap-2">
+                                        Review Case <span class="material-symbols-outlined text-xs">north_east</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Panel: Source Distribution -->
+<div class="space-y-6">
+<div class="border-b border-border-subtle pb-4">
+<h2 class="text-xs font-bold text-white uppercase tracking-[0.2em]">Data Provenance</h2>
+</div>
+<div class="bg-surface border border-border-subtle p-8 space-y-8">
+<div>
+<p class="text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-6">Source Heatmap</p>
+<div class="grid grid-cols-7 gap-1">
+<!-- Minimal grayscale heatmap -->
+<div class="aspect-square bg-slate-800"></div>
+<div class="aspect-square bg-slate-700"></div>
+<div class="aspect-square bg-slate-800"></div>
+<div class="aspect-square bg-primary/40"></div>
+<div class="aspect-square bg-primary/80"></div>
+<div class="aspect-square bg-slate-800"></div>
+<div class="aspect-square bg-slate-700"></div>
+<div class="aspect-square bg-slate-800"></div>
+<div class="aspect-square bg-slate-800"></div>
+<div class="aspect-square bg-primary"></div>
+<div class="aspect-square bg-slate-800"></div>
+<div class="aspect-square bg-slate-700"></div>
+<div class="aspect-square bg-slate-800"></div>
+<div class="aspect-square bg-slate-800"></div>
+<div class="aspect-square bg-slate-800"></div>
+<div class="aspect-square bg-slate-700"></div>
+<div class="aspect-square bg-slate-800"></div>
+<div class="aspect-square bg-slate-700"></div>
+<div class="aspect-square bg-slate-800"></div>
+<div class="aspect-square bg-slate-800"></div>
+<div class="aspect-square bg-slate-800"></div>
+</div>
+</div>
+<div class="space-y-6">
+<div class="space-y-2">
+<div class="flex justify-between text-[10px] font-bold tracking-widest text-slate-500 uppercase">
+<span>Securities &amp; Exchange Commission</span>
+<span class="text-slate-300">42%</span>
+</div>
+<div class="h-1 bg-slate-800 w-full overflow-hidden">
+<div class="h-full bg-primary w-[42%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-[10px] font-bold tracking-widest text-slate-500 uppercase">
+<span>FINRA Compliance Data</span>
+<span class="text-slate-300">28%</span>
+</div>
+<div class="h-1 bg-slate-800 w-full overflow-hidden">
+<div class="h-full bg-slate-600 w-[28%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-[10px] font-bold tracking-widest text-slate-500 uppercase">
+<span>CFTC Filings</span>
+<span class="text-slate-300">15%</span>
+</div>
+<div class="h-1 bg-slate-800 w-full overflow-hidden">
+<div class="h-full bg-slate-700 w-[15%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Row: Activity Log -->
+<div class="bg-surface border border-border-subtle">
+<div class="px-8 py-6 border-b border-border-subtle flex items-center justify-between">
+<h2 class="text-xs font-bold text-white uppercase tracking-[0.2em]">Operational Ledger</h2>
+<span class="material-symbols-outlined text-slate-600 cursor-pointer">more_horiz</span>
+</div>
+<div class="p-8">
+<div class="space-y-8 relative before:absolute before:left-[15px] before:top-2 before:bottom-2 before:w-[1px] before:bg-slate-800">
+<!-- Log Entry 1 -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-1 size-8 border border-border-subtle bg-background-dark flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-slate-500 text-sm">history_edu</span>
+</div>
+<div>
+<div class="flex items-center gap-4">
+<span class="text-[10px] font-bold text-white uppercase tracking-widest">Protocol.RegAI.01</span>
+<span class="text-[10px] text-slate-600 font-mono">12:45:08 UTC</span>
+</div>
+<p class="text-slate-400 text-xs mt-1 leading-relaxed">System-wide scan initiated across 14 regulatory nodes. Two (2) unique amendments identified in Rule 204. Primary indexing complete.</p>
+</div>
+</div>
+<!-- Log Entry 2 -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-1 size-8 border border-border-subtle bg-background-dark flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-slate-500 text-sm">assignment_turned_in</span>
+</div>
+<div>
+<div class="flex items-center gap-4">
+<span class="text-[10px] font-bold text-white uppercase tracking-widest">Analysis.Logic.Core</span>
+<span class="text-[10px] text-slate-600 font-mono">11:30:12 UTC</span>
+</div>
+<p class="text-slate-400 text-xs mt-1 leading-relaxed">Assigned <span class="text-slate-200 underline underline-offset-4">CRITICAL</span> priority status to SEC-2024-X-04. Alignment with institutional risk profile confirmed.</p>
+</div>
+</div>
+<!-- Log Entry 3 -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-1 size-8 border border-border-subtle bg-background-dark flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-slate-500 text-sm">forward_to_inbox</span>
+</div>
+<div>
+<div class="flex items-center gap-4">
+<span class="text-[10px] font-bold text-white uppercase tracking-widest">Engine.Notifier</span>
+<span class="text-[10px] text-slate-600 font-mono">09:15:45 UTC</span>
+</div>
+<p class="text-slate-400 text-xs mt-1 leading-relaxed">Executive summaries dispatched to three (3) Senior Relationship Partners via secure channel.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

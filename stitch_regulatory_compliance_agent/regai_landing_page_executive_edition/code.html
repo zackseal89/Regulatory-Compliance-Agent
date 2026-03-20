@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RegAI | Autonomous Regulatory Intelligence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1B3A57", // Executive Navy
+                        "accent": "#94A3B8", // Slate Silver
+                        "surface": "#1E222D",
+                        "background-dark": "#0F1117",
+                        "border-subtle": "rgba(255, 255, 255, 0.08)",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.375rem",
+                        "2xl": "0.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F1117;
+            -webkit-font-smoothing: antialiased;
+        }
+        .executive-border {
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .surface-card {
+            background: #1E222D;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        /* Removing mesh gradients and glows as per request */
+    </style>
+</head>
+<body class="bg-background-dark text-slate-300 selection:bg-primary/50">
+<div class="relative min-h-screen overflow-x-hidden">
+<!-- Navigation -->
+<header class="fixed top-0 w-full z-50 border-b border-border-subtle bg-background-dark/95 backdrop-blur-sm">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xl">account_balance</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-white uppercase">RegAI</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-xs font-semibold uppercase tracking-widest text-slate-400 hover:text-white transition-colors" href="#">Solutions</a>
+<a class="text-xs font-semibold uppercase tracking-widest text-slate-400 hover:text-white transition-colors" href="#">Capabilities</a>
+<a class="text-xs font-semibold uppercase tracking-widest text-slate-400 hover:text-white transition-colors" href="#">Compliance Hub</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="hidden sm:block text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Sign In</button>
+<button class="px-5 py-2.5 bg-primary hover:bg-primary/90 text-white text-xs font-bold uppercase tracking-widest transition-all">
+                    Request Access
+                </button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative pt-48 pb-24 px-6">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+<!-- Hero Content -->
+<div class="flex-1 text-center lg:text-left">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 text-slate-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-8">
+<span class="h-1 w-1 rounded-full bg-primary"></span>
+                    Enterprise Grade Intelligence
+                </div>
+<h1 class="text-4xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-white mb-8">
+                    Precision Compliance for <br/><span class="text-slate-400">East Africa's Leaders</span>
+</h1>
+<p class="text-base lg:text-lg text-slate-400 leading-relaxed max-w-xl mb-10 mx-auto lg:mx-0">
+                    The autonomous regulatory engine for top-tier financial institutions. Monitoring, analysis, and automated materiality reporting for <span class="text-white">CBK, CMA, CA, and EAC</span> frameworks.
+                </p>
+<div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+<button class="w-full sm:w-auto px-8 py-4 bg-primary text-white text-sm font-bold uppercase tracking-widest transition-all hover:bg-primary/80">
+                        Request Beta Access
+                    </button>
+<button class="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/10 text-white text-sm font-bold uppercase tracking-widest hover:bg-white/5 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xl">play_circle</span>
+                        System Demo
+                    </button>
+</div>
+</div>
+<!-- Hero Visual -->
+<div class="flex-1 relative w-full max-w-[600px]">
+<div class="relative surface-card p-2 shadow-2xl">
+<div class="bg-[#0A0C10] overflow-hidden aspect-[4/3] relative">
+<!-- Dashboard UI Placeholder -->
+<div class="w-full h-full p-8 flex flex-col gap-6">
+<div class="flex items-center justify-between border-b border-white/5 pb-4">
+<div class="h-4 w-32 bg-white/10"></div>
+<div class="h-4 w-4 bg-white/10"></div>
+</div>
+<div class="flex-1 space-y-6">
+<div class="h-8 w-1/2 bg-white/5"></div>
+<div class="grid grid-cols-2 gap-4">
+<div class="h-24 bg-white/[0.03] border border-white/5"></div>
+<div class="h-24 bg-white/[0.03] border border-white/5"></div>
+</div>
+<div class="space-y-3">
+<div class="h-2 w-full bg-white/5"></div>
+<div class="h-2 w-full bg-white/5"></div>
+<div class="h-2 w-3/4 bg-white/5"></div>
+</div>
+</div>
+</div>
+<img class="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none grayscale" data-alt="Corporate analytics interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjOHfDEYqx8wOoUd-znXr_8xWIBXtBW3btFPCBhdf0EyyGFaeUolp_b12dc-JFKrVDi0nP52iJUjdgfHBWwW3HzaHEavjwSHKbzATq9ZO0aX8SwhzEF23I1C6tB2Cr61o3srCDzzUonZUVqB0DU_Q16ipGVpSujWSVxCIWtBM_HjTcDfo11MxngfzstRPTWTNAsc_LGB4VZiaLkiRGnvEfYLBYRav9lTcS8BIEK3KjbSBWviTTtoNZFLejPheR8u_Uf69F7w0NgBM"/>
+</div>
+</div>
+<!-- Precision Badge -->
+<div class="absolute -bottom-4 -left-4 px-6 py-4 surface-card shadow-xl">
+<div class="text-white font-bold text-xl leading-none">99.9%</div>
+<div class="text-[9px] text-slate-500 uppercase tracking-widest mt-1 font-bold">Data Accuracy</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="py-12 border-y border-border-subtle bg-white/[0.01]">
+<div class="max-w-7xl mx-auto px-6">
+<p class="text-center text-[10px] font-bold text-slate-500 uppercase tracking-[0.4em] mb-10">Institutional Compliance Frameworks</p>
+<div class="flex flex-wrap justify-center gap-16 opacity-30 grayscale">
+<span class="text-xl font-bold text-white tracking-widest">CBK</span>
+<span class="text-xl font-bold text-white tracking-widest">CMA</span>
+<span class="text-xl font-bold text-white tracking-widest">CA</span>
+<span class="text-xl font-bold text-white tracking-widest">EAC</span>
+<span class="text-xl font-bold text-white tracking-widest">KRA</span>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-32 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-xl">
+<h2 class="text-3xl lg:text-4xl font-bold text-white mb-6 tracking-tight uppercase">Regulatory Intelligence</h2>
+<p class="text-slate-500 text-base leading-relaxed">
+                        Engineered for the rigorous demands of legal and compliance departments in the East African financial sector.
+                    </p>
+</div>
+<div class="h-px flex-1 bg-border-subtle hidden md:block mb-4 ml-12"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-border-subtle">
+<!-- Feature 1 -->
+<div class="p-10 border-b md:border-b-0 md:border-r border-border-subtle hover:bg-white/[0.02] transition-colors group">
+<div class="w-10 h-10 border border-primary/30 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary text-2xl font-light">account_tree</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-4 uppercase tracking-wider">Autonomous Ingestion</h3>
+<p class="text-slate-500 text-sm leading-relaxed">
+                        Direct monitoring of official gazettes and regulatory portals. Real-time capture of legislative amendments and circulars.
+                    </p>
+</div>
+<!-- Feature 2 -->
+<div class="p-10 border-b md:border-b-0 md:border-r border-border-subtle hover:bg-white/[0.02] transition-colors">
+<div class="w-10 h-10 border border-primary/30 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary text-2xl font-light">gavel</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-4 uppercase tracking-wider">Materiality Reasoning</h3>
+<p class="text-slate-500 text-sm leading-relaxed">
+                        Clinical assessment of regulatory impact using domain-specific models. Distinguishes critical mandates from administrative noise.
+                    </p>
+</div>
+<!-- Feature 3 -->
+<div class="p-10 hover:bg-white/[0.02] transition-colors">
+<div class="w-10 h-10 border border-primary/30 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary text-2xl font-light">fact_check</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-4 uppercase tracking-wider">Executive Reporting</h3>
+<p class="text-slate-500 text-sm leading-relaxed">
+                        Automated generation of risk profiles and briefing notes. Structured data outputs ready for GRC integration.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-6">
+<div class="max-w-5xl mx-auto surface-card p-12 lg:p-24 text-center">
+<h2 class="text-3xl lg:text-5xl font-bold text-white mb-8 tracking-tight uppercase">Institutional Access</h2>
+<p class="text-slate-500 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
+                Join the selected cohort of regional leaders implementing autonomous regulatory systems. Structured onboarding for enterprise partners.
+            </p>
+<button class="px-10 py-5 bg-primary hover:bg-primary/90 text-white font-bold text-xs uppercase tracking-[0.2em] transition-all flex items-center gap-4 mx-auto">
+                Request System Access 
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="py-20 border-t border-border-subtle px-6">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-16">
+<div class="max-w-sm">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-6 h-6 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xs">account_balance</span>
+</div>
+<span class="text-lg font-bold tracking-tight text-white uppercase">RegAI</span>
+</div>
+<p class="text-slate-600 text-xs leading-relaxed uppercase tracking-wider">
+                    The definitive platform for autonomous regulatory intelligence in the East African Community. Reliability by design.
+                </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-16">
+<div class="flex flex-col gap-5">
+<h4 class="text-white font-bold text-[10px] uppercase tracking-[0.3em]">Platform</h4>
+<a class="text-slate-600 hover:text-white text-xs font-medium transition-colors" href="#">Capabilities</a>
+<a class="text-slate-600 hover:text-white text-xs font-medium transition-colors" href="#">Infrastructure</a>
+<a class="text-slate-600 hover:text-white text-xs font-medium transition-colors" href="#">Security</a>
+</div>
+<div class="flex flex-col gap-5">
+<h4 class="text-white font-bold text-[10px] uppercase tracking-[0.3em]">Institutional</h4>
+<a class="text-slate-600 hover:text-white text-xs font-medium transition-colors" href="#">About</a>
+<a class="text-slate-600 hover:text-white text-xs font-medium transition-colors" href="#">Advisory</a>
+<a class="text-slate-600 hover:text-white text-xs font-medium transition-colors" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-5">
+<h4 class="text-white font-bold text-[10px] uppercase tracking-[0.3em]">Legal</h4>
+<a class="text-slate-600 hover:text-white text-xs font-medium transition-colors" href="#">Privacy</a>
+<a class="text-slate-600 hover:text-white text-xs font-medium transition-colors" href="#">Terms</a>
+<a class="text-slate-600 hover:text-white text-xs font-medium transition-colors" href="#">Compliance</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-24 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-8">
+<p class="text-slate-700 text-[10px] font-bold uppercase tracking-widest">© 2024 RegAI Autonomous Systems. All rights reserved.</p>
+<div class="flex items-center gap-8">
+<a class="text-slate-700 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-lg">public</span></a>
+<a class="text-slate-700 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-lg">shield</span></a>
+<a class="text-slate-700 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-lg">contract</span></a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

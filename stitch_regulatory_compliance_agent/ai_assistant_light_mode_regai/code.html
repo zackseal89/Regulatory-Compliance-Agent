@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a3956",
+                        "background-light": "#f8fafc",
+                        "surface-light": "#ffffff",
+                        "border-light": "#e1e8f0",
+                        "background-dark": "#14191e",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<title>RegAI Assistant</title>
+</head>
+<body class="bg-background-light font-display text-slate-900">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-64 flex-shrink-0 flex flex-col border-r border-border-light bg-surface-light">
+<div class="p-6 flex items-center gap-3">
+<div class="size-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined">shield_person</span>
+</div>
+<div>
+<h1 class="text-primary font-bold text-lg leading-tight">RegAI</h1>
+<p class="text-slate-500 text-xs font-medium uppercase tracking-wider">Enterprise Edition</p>
+</div>
+</div>
+<nav class="flex-1 px-4 py-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-primary/10 text-primary rounded border-r-4 border-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px] fill-current">smart_toy</span>
+<span class="text-sm font-semibold">AI Assistant</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">description</span>
+<span class="text-sm font-medium">Regulations</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">security</span>
+<span class="text-sm font-medium">Compliance</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="p-4 border-t border-border-light">
+<div class="flex items-center gap-3 px-2 py-3 rounded-lg bg-slate-50 border border-border-light">
+<div class="size-10 rounded-full bg-slate-200 bg-cover bg-center" data-alt="User profile photo avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDiY9b3EHN7CmJGaYCYnpp6h5-RUB2P8LB4Jdq-h_LYpYAHYw9857Ajau4xZmVN60F92SwxJYOe6T5iVOHiVVOEn4hUcaW0mG1auThUnq-ouS0dCA32yD11gld9qu-axuHrd6pHrMvW1ZeD0VMYBmNvl1dmFTIw2DPtsnRYwOsWvHtr-n-VV_7r8G5qZcvwFyLwsPjPscV9hw7nfpD5lO1Rg9jf0NB3QMqT3AouheUtnNmSheN_w-SfepSPBv5os-f9zgEdUYFcOjE')"></div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-semibold text-slate-900 truncate">Executive User</p>
+<p class="text-xs text-slate-500 truncate">Compliance Officer</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col min-w-0 overflow-hidden">
+<!-- Header -->
+<header class="h-16 flex-shrink-0 bg-surface-light border-b border-border-light flex items-center justify-between px-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">smart_toy</span>
+<h2 class="text-lg font-bold text-slate-900">AI Assistant</h2>
+<span class="mx-2 text-slate-300">/</span>
+<span class="text-sm font-medium text-slate-500">CBK Circular 15/2026 Analysis</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="pl-10 pr-4 py-1.5 bg-slate-50 border border-border-light rounded-lg text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none w-64" placeholder="Search archive..." type="text"/>
+</div>
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-lg relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2.5 size-2 bg-red-500 rounded-full border-2 border-surface-light"></span>
+</button>
+</div>
+</header>
+<!-- Two Column Layout -->
+<div class="flex-1 flex overflow-hidden">
+<!-- Left Column: Chat Interface (65%) -->
+<section class="w-[65%] flex flex-col bg-surface-light border-r border-border-light">
+<div class="flex-1 overflow-y-auto p-8 space-y-6">
+<!-- Date Separator -->
+<div class="flex justify-center">
+<span class="px-3 py-1 bg-slate-50 text-slate-400 text-[10px] font-bold uppercase tracking-widest rounded-full border border-border-light">Today, Oct 24</span>
+</div>
+<!-- Assistant Message -->
+<div class="flex items-start gap-4">
+<div class="size-8 rounded-full bg-primary flex items-center justify-center shrink-0 mt-1">
+<span class="material-symbols-outlined text-white text-sm">smart_toy</span>
+</div>
+<div class="space-y-1 max-w-[85%]">
+<div class="p-4 bg-surface-light border border-border-light rounded-xl rounded-tl-none shadow-sm">
+<p class="text-sm leading-relaxed text-slate-700">
+                                    I've completed the analysis of <strong>CBK Circular 15/2026</strong>. This circular primarily addresses updated security frameworks for digital payment systems, with a significant emphasis on cross-border transaction protocols.
+                                </p>
+<p class="text-sm leading-relaxed text-slate-700 mt-3">
+                                    Specifically, it mandates that all Category A financial institutions implement enhanced Multi-Factor Authentication (MFA) by early 2026. Would you like me to summarize the compliance deadlines?
+                                </p>
+</div>
+<span class="text-[11px] text-slate-400 font-medium">Assistant • 10:42 AM</span>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex items-start gap-4 justify-end">
+<div class="space-y-1 max-w-[85%] flex flex-col items-end">
+<div class="p-4 bg-slate-100 border border-slate-200 rounded-xl rounded-tr-none shadow-sm">
+<p class="text-sm leading-relaxed text-slate-700">
+                                    What are the specific implementation deadlines mentioned in Section 4.2 for regional clearinghouses?
+                                </p>
+</div>
+<span class="text-[11px] text-slate-400 font-medium">You • 10:44 AM</span>
+</div>
+<div class="size-8 rounded-full bg-slate-200 bg-cover bg-center shrink-0 mt-1" data-alt="User profile avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBDGEqIw0jXcidk4KX6hYEP_WFFpmMRMU_qp6-lvt_RQWiKQ9xQywfgTKvts9ap1TZkjkpiIRBU-eD0nNjZIqEbQrasS7sUVX_xwrDay1dxVBAx5XTuwPt3VgjRvBh419SemB8xJwP05LAIxRK5ynm6c_NDihd0TG-isf7LfHtobY28aWE5yX8MH_icinBY2rj84NE7RUiOyQuaZxlmO5BHuzYmTTZt9SLQaX41VV540W22YB9gBc6nmD03Cxbl-v1252k80r_1wj8')"></div>
+</div>
+<!-- Assistant Message (Response) -->
+<div class="flex items-start gap-4">
+<div class="size-8 rounded-full bg-primary flex items-center justify-center shrink-0 mt-1">
+<span class="material-symbols-outlined text-white text-sm">smart_toy</span>
+</div>
+<div class="space-y-1 max-w-[85%]">
+<div class="p-4 bg-surface-light border border-border-light rounded-xl rounded-tl-none shadow-sm">
+<p class="text-sm leading-relaxed text-slate-700">
+                                    According to Section 4.2 of Circular 15/2026, the deadlines are staggered based on transaction volume:
+                                </p>
+<ul class="list-disc ml-4 mt-2 space-y-2 text-sm text-slate-700">
+<li><strong>Phase 1 (Technical Readiness):</strong> Implementation of baseline protocols by <span class="text-primary font-semibold">March 15, 2026</span>.</li>
+<li><strong>Phase 2 (Integration):</strong> Full synchronization with the regional gateway by <span class="text-primary font-semibold">June 30, 2026</span>.</li>
+<li><strong>Final Compliance:</strong> Mandatory audit certification must be submitted by <span class="text-primary font-semibold">September 1, 2026</span>.</li>
+</ul>
+<p class="text-sm leading-relaxed text-slate-700 mt-3">
+                                    Failure to meet these timelines may result in temporary suspension from the regional settlement network.
+                                </p>
+</div>
+<span class="text-[11px] text-slate-400 font-medium">Assistant • 10:45 AM</span>
+</div>
+</div>
+</div>
+<!-- Input Bar -->
+<div class="p-6 border-t border-border-light">
+<div class="max-w-4xl mx-auto relative">
+<input class="w-full pl-6 pr-24 py-4 bg-slate-50 border border-border-light rounded-xl text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none shadow-sm" placeholder="Ask about regulations..." type="text"/>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
+<button class="p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<button class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-bold flex items-center gap-2">
+<span>Send</span>
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+<p class="text-center text-[10px] text-slate-400 mt-3 font-medium">RegAI can make mistakes. Verify important financial data.</p>
+</div>
+</section>
+<!-- Right Column: Cited Sources (35%) -->
+<section class="w-[35%] bg-background-light p-6 overflow-y-auto">
+<div class="bg-surface-light border border-border-light rounded-xl shadow-sm h-full flex flex-col">
+<div class="p-5 border-b border-border-light flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">menu_book</span>
+<h3 class="font-bold text-slate-900 text-sm">Cited Sources</h3>
+</div>
+<span class="bg-slate-100 text-slate-500 text-[10px] font-bold px-2 py-0.5 rounded uppercase">3 Citations</span>
+</div>
+<div class="p-4 space-y-4">
+<!-- Source Card 1 -->
+<div class="p-4 border border-border-light rounded-lg hover:border-primary/30 hover:bg-slate-50 transition-all cursor-pointer group">
+<div class="flex items-start justify-between mb-2">
+<span class="text-[10px] font-bold bg-primary/10 text-primary px-2 py-0.5 rounded">PDF DOCUMENT</span>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors text-lg">open_in_new</span>
+</div>
+<h4 class="text-sm font-semibold text-slate-800 mb-1">CBK Circular 15/2026</h4>
+<p class="text-xs text-slate-500 line-clamp-2 italic mb-3">"...Section 4.2 specifically outlines the technical requirements for regional clearinghouses during the transition phase..."</p>
+<div class="flex items-center gap-2 text-[11px] text-slate-400">
+<span class="material-symbols-outlined text-xs">calendar_today</span>
+<span>Aug 12, 2024</span>
+</div>
+</div>
+<!-- Source Card 2 -->
+<div class="p-4 border border-border-light rounded-lg hover:border-primary/30 hover:bg-slate-50 transition-all cursor-pointer group">
+<div class="flex items-start justify-between mb-2">
+<span class="text-[10px] font-bold bg-slate-100 text-slate-500 px-2 py-0.5 rounded">INTERNAL POLICY</span>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors text-lg">open_in_new</span>
+</div>
+<h4 class="text-sm font-semibold text-slate-800 mb-1">Cybersecurity Framework v4.0</h4>
+<p class="text-xs text-slate-500 line-clamp-2 italic mb-3">"All multi-factor authentication systems must adhere to the high-assurance standards defined in internal appendix B."</p>
+<div class="flex items-center gap-2 text-[11px] text-slate-400">
+<span class="material-symbols-outlined text-xs">calendar_today</span>
+<span>Sep 01, 2024</span>
+</div>
+</div>
+<!-- Source Card 3 -->
+<div class="p-4 border border-border-light rounded-lg hover:border-primary/30 hover:bg-slate-50 transition-all cursor-pointer group">
+<div class="flex items-start justify-between mb-2">
+<span class="text-[10px] font-bold bg-slate-100 text-slate-500 px-2 py-0.5 rounded">GOV GAZETTE</span>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors text-lg">open_in_new</span>
+</div>
+<h4 class="text-sm font-semibold text-slate-800 mb-1">Regional Settlement Protocol</h4>
+<p class="text-xs text-slate-500 line-clamp-2 italic mb-3">"Guidelines for the cross-border digital economy integration with local financial mandates."</p>
+<div class="flex items-center gap-2 text-[11px] text-slate-400">
+<span class="material-symbols-outlined text-xs">calendar_today</span>
+<span>May 20, 2024</span>
+</div>
+</div>
+</div>
+<div class="mt-auto p-4 border-t border-border-light">
+<button class="w-full py-2.5 text-sm font-semibold text-primary border border-primary hover:bg-primary/5 rounded-lg transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">download</span>
+                            Download Full Report
+                        </button>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RegAI Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1B3A57",
+                        "background-light": "#F8FAFC",
+                        "border-subtle": "#E1E8F0",
+                        "surface": "#FFFFFF",
+                        "alert-red": "#DC2626",
+                        "alert-orange": "#D97706",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8FAFC;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            background-color: rgba(27, 58, 87, 0.08);
+            border-left: 3px solid #1B3A57;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-slate-900 font-display">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-64 flex-shrink-0 border-r border-border-subtle bg-surface flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="size-8 bg-primary rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xl">security</span>
+</div>
+<div>
+<h1 class="text-primary text-lg font-bold leading-none">RegAI</h1>
+<p class="text-slate-500 text-[10px] uppercase tracking-wider font-semibold mt-1">Enterprise Regulatory AI</p>
+</div>
+</div>
+<nav class="flex-1 px-3 space-y-1 py-4">
+<a class="sidebar-active flex items-center gap-3 px-3 py-2.5 text-primary rounded-sm transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-semibold">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 hover:bg-slate-50 rounded-sm transition-colors" href="#">
+<span class="material-symbols-outlined">balance</span>
+<span class="text-sm font-medium">Materiality</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 hover:bg-slate-50 rounded-sm transition-colors" href="#">
+<span class="material-symbols-outlined">database</span>
+<span class="text-sm font-medium">Sources</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 hover:bg-slate-50 rounded-sm transition-colors" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-sm font-medium">Agent Activity</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 hover:bg-slate-50 rounded-sm transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="p-4 border-t border-border-subtle">
+<div class="bg-slate-50 p-3 rounded-lg">
+<p class="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-2">Usage</p>
+<div class="w-full bg-slate-200 h-1.5 rounded-full mb-2">
+<div class="bg-primary h-1.5 rounded-full w-3/4"></div>
+</div>
+<p class="text-xs text-slate-600">75% of credits used</p>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-y-auto">
+<!-- Header -->
+<header class="h-16 bg-surface border-b border-border-subtle flex items-center justify-between px-8 flex-shrink-0 sticky top-0 z-10">
+<div class="flex items-center gap-4 flex-1">
+<h2 class="text-xl font-bold text-primary">Dashboard</h2>
+<div class="max-w-md w-full ml-8">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
+<input class="w-full pl-10 pr-4 py-1.5 bg-slate-50 border border-border-subtle rounded text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none" placeholder="Search regulations, documents or alerts..." type="text"/>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100 rounded-full relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-alert-red rounded-full border-2 border-surface"></span>
+</button>
+<div class="h-8 w-[1px] bg-border-subtle mx-2"></div>
+<div class="flex items-center gap-3 cursor-pointer">
+<div class="text-right">
+<p class="text-sm font-bold text-primary leading-none">Alex Sterling</p>
+<p class="text-[11px] text-slate-500 font-medium">Compliance Officer</p>
+</div>
+<div class="size-9 rounded-full bg-slate-200 border border-border-subtle overflow-hidden">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="Corporate headshot of a male compliance officer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXj2DtAAhwARyxSF5WRn3b2kF2dBt_PpbINzU7gooF2UXIOcPMaMstshL3bsS3jyjFtLBJP8Uv57yIO3043lUfjENGcVVHsxPjPltLi2sRbAz3nfVbMtX044knODTcru19LvkmnEy8o0yHcfwo5_voMBiFjPU9R1smEQvTpn6LRAp-ZDIibb2OkeMZZVi0KHJilTyxGoABYxhWPJL204dqdoX2xOxxelt4iHggBNj4_RmVChyd5HeqZ1A6p70m3hdNcKZ8Bt6cAkE"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="p-8 space-y-8 max-w-[1400px]">
+<!-- Stat Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface border border-border-subtle p-5 rounded-lg flex flex-col">
+<p class="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-2">Updates Today</p>
+<div class="flex items-end justify-between">
+<span class="text-3xl font-bold text-primary">12</span>
+<span class="text-xs font-bold text-emerald-600 flex items-center bg-emerald-50 px-2 py-0.5 rounded">+2% <span class="material-symbols-outlined text-[14px]">arrow_upward</span></span>
+</div>
+</div>
+<div class="bg-surface border border-border-subtle p-5 rounded-lg flex flex-col">
+<p class="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-2">HIGH Alerts</p>
+<div class="flex items-end justify-between">
+<span class="text-3xl font-bold text-alert-red">3</span>
+<span class="text-xs font-bold text-emerald-600 flex items-center bg-emerald-50 px-2 py-0.5 rounded">+1% <span class="material-symbols-outlined text-[14px]">arrow_upward</span></span>
+</div>
+</div>
+<div class="bg-surface border border-border-subtle p-5 rounded-lg flex flex-col">
+<p class="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-2">Pending Review</p>
+<div class="flex items-end justify-between">
+<span class="text-3xl font-bold text-alert-orange">5</span>
+<span class="text-xs font-bold text-alert-red flex items-center bg-red-50 px-2 py-0.5 rounded">-3% <span class="material-symbols-outlined text-[14px]">arrow_downward</span></span>
+</div>
+</div>
+<div class="bg-surface border border-border-subtle p-5 rounded-lg flex flex-col">
+<p class="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-2">Active Clients</p>
+<div class="flex items-end justify-between">
+<span class="text-3xl font-bold text-primary">8</span>
+<span class="text-xs font-bold text-slate-500 flex items-center bg-slate-50 px-2 py-0.5 rounded">0% <span class="material-symbols-outlined text-[14px]">remove</span></span>
+</div>
+</div>
+</div>
+<!-- Middle Row -->
+<div class="flex flex-col lg:flex-row gap-6">
+<!-- Materiality Overview -->
+<div class="lg:w-[65%] bg-surface border border-border-subtle rounded-lg flex flex-col overflow-hidden">
+<div class="px-6 py-4 border-b border-border-subtle flex items-center justify-between">
+<h3 class="font-bold text-primary">Materiality Overview</h3>
+<button class="text-xs font-bold text-primary hover:underline">View All Updates</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-slate-50 text-[11px] font-bold text-slate-500 uppercase tracking-wider border-b border-border-subtle">
+<tr>
+<th class="px-6 py-3">Regulatory Update</th>
+<th class="px-6 py-3">Impact Score</th>
+<th class="px-6 py-3">Status</th>
+<th class="px-6 py-3">Date</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle">
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4 text-sm font-medium text-slate-900">SEC Climate Disclosure Rule</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-semibold bg-red-100 text-red-800">High</span>
+</td>
+<td class="px-6 py-4 text-sm text-slate-600">
+<div class="flex items-center gap-2">
+<span class="size-2 rounded-full bg-alert-orange"></span>
+                                                Under Review
+                                            </div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 font-medium">Oct 24, 2023</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4 text-sm font-medium text-slate-900">EU AI Act Compliance</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-semibold bg-red-800 text-white">Critical</span>
+</td>
+<td class="px-6 py-4 text-sm text-slate-600">
+<div class="flex items-center gap-2">
+<span class="size-2 rounded-full bg-alert-red animate-pulse"></span>
+                                                Action Required
+                                            </div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 font-medium">Oct 23, 2023</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4 text-sm font-medium text-slate-900">UK FCA Consumer Duty</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-semibold bg-slate-100 text-slate-700">Medium</span>
+</td>
+<td class="px-6 py-4 text-sm text-slate-600">
+<div class="flex items-center gap-2">
+<span class="size-2 rounded-full bg-emerald-500"></span>
+                                                Completed
+                                            </div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 font-medium">Oct 22, 2023</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Source Distribution -->
+<div class="lg:w-[35%] bg-surface border border-border-subtle rounded-lg flex flex-col p-6">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-bold text-primary">Source Distribution</h3>
+<span class="material-symbols-outlined text-slate-400">more_horiz</span>
+</div>
+<div class="flex-1 flex flex-col justify-center items-center">
+<!-- SVG Pie Chart Illustration -->
+<div class="relative w-48 h-48 mb-6">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 100 100">
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#1B3A57" stroke-dasharray="251.2" stroke-dashoffset="62.8" stroke-width="20"></circle>
+<circle class="opacity-80" cx="50" cy="50" fill="transparent" r="40" stroke="#475569" stroke-dasharray="251.2" stroke-dashoffset="188.4" stroke-width="20"></circle>
+<circle class="opacity-60" cx="50" cy="50" fill="transparent" r="40" stroke="#94A3B8" stroke-dasharray="251.2" stroke-dashoffset="220" stroke-width="20"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-2xl font-bold text-primary">124</span>
+<span class="text-[10px] text-slate-500 font-bold uppercase">Total Sources</span>
+</div>
+</div>
+<div class="w-full space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-sm bg-primary"></div>
+<span class="text-xs text-slate-600 font-medium">Regulatory Agencies</span>
+</div>
+<span class="text-xs font-bold text-primary">75%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-sm bg-slate-600"></div>
+<span class="text-xs text-slate-600 font-medium">Internal Audits</span>
+</div>
+<span class="text-xs font-bold text-primary">15%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-sm bg-slate-400"></div>
+<span class="text-xs text-slate-600 font-medium">External Consultants</span>
+</div>
+<span class="text-xs font-bold text-primary">10%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Row: Activity Log -->
+<div class="bg-surface border border-border-subtle rounded-lg flex flex-col overflow-hidden">
+<div class="px-6 py-4 border-b border-border-subtle flex items-center justify-between">
+<h3 class="font-bold text-primary">Agent Activity Log</h3>
+<div class="flex gap-2">
+<span class="inline-flex items-center px-2 py-1 bg-slate-50 border border-border-subtle text-[11px] font-bold text-slate-600 rounded">Export Logs</span>
+<span class="inline-flex items-center px-2 py-1 bg-slate-50 border border-border-subtle text-[11px] font-bold text-slate-600 rounded">Filter</span>
+</div>
+</div>
+<div class="p-8">
+<div class="relative">
+<!-- Timeline line -->
+<div class="absolute left-[7px] top-0 bottom-0 w-[2px] bg-slate-100"></div>
+<!-- Timeline items -->
+<div class="space-y-8 relative">
+<div class="flex items-start gap-6">
+<div class="z-10 mt-1.5 size-4 rounded-full border-2 border-surface bg-primary shadow-sm"></div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-1">
+<p class="text-sm font-bold text-slate-900">Regulatory Scan Completed</p>
+<span class="text-[11px] font-medium text-slate-400">10:45 AM</span>
+</div>
+<p class="text-sm text-slate-600">The autonomous agent scanned 48 primary sources and identified 2 potential materiality changes in North American jurisdiction.</p>
+<div class="mt-2 flex gap-2">
+<span class="px-2 py-0.5 bg-slate-50 border border-border-subtle rounded text-[10px] font-semibold text-primary">Agent #04</span>
+<span class="px-2 py-0.5 bg-slate-50 border border-border-subtle rounded text-[10px] font-semibold text-primary">Success</span>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="z-10 mt-1.5 size-4 rounded-full border-2 border-surface bg-primary shadow-sm"></div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-1">
+<p class="text-sm font-bold text-slate-900">Data Source Refreshed: SEC</p>
+<span class="text-[11px] font-medium text-slate-400">09:12 AM</span>
+</div>
+<p class="text-sm text-slate-600">API connection validated for Securities and Exchange Commission data stream. Latency: 124ms.</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="z-10 mt-1.5 size-4 rounded-full border-2 border-surface bg-slate-400 shadow-sm"></div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-1">
+<p class="text-sm font-bold text-slate-900">Draft Analysis Generated</p>
+<span class="text-[11px] font-medium text-slate-400">08:05 AM</span>
+</div>
+<p class="text-sm text-slate-600">Initial materiality assessment for 'Consumer Privacy Act Update 2024' prepared for review.</p>
+<div class="mt-2">
+<a class="text-xs font-bold text-primary flex items-center gap-1" href="#">Open Draft <span class="material-symbols-outlined text-[14px]">open_in_new</span></a>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="z-10 mt-1.5 size-4 rounded-full border-2 border-surface bg-primary shadow-sm"></div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-1">
+<p class="text-sm font-bold text-slate-900">Daily Health Check</p>
+<span class="text-[11px] font-medium text-slate-400">06:00 AM</span>
+</div>
+<p class="text-sm text-slate-600">Systems operational. All 12 distributed agents reporting healthy status. Integrity scan 100%.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

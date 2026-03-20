@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+@theme {
+  --color-primary: #1B3A57;
+  --color-accent-silver: #94A3B8;
+  
+  /* Theming mapping */
+  --color-background-dark: var(--bg-app);
+  --color-surface: var(--bg-surface);
+  --color-border-subtle: var(--border-subtle);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Inter', sans-serif;
+  
+  --radius-DEFAULT: var(--border-radius);
+  --radius-lg: 2px;
+  --radius-xl: 4px;
+}
+
+:root {
+  --bg-app: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --border-subtle: #E1E8F0;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border-radius: 4px; /* Slightly softer in light mode as per some designs, but maybe stick to sharp? */
+}
+
+.dark {
+  --bg-app: #0F1117;
+  --bg-surface: #1E222D;
+  --border-subtle: #2D3343;
+  --text-main: #FFFFFF;
+  --text-muted: #94A3B8;
+  --border-radius: 0px; /* Sharp for dark executive edition */
+}
+
+@layer base {
+  body {
+    @apply antialiased bg-background-dark text-text-main transition-colors duration-300;
+    font-family: var(--font-sans);
+  }
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.active-nav {
+  @apply bg-primary/10 dark:bg-primary/30 text-primary dark:text-white border-l-2 border-primary;
+}
+
+/* Strip all glow effects */
+* { box-shadow: none !important; text-shadow: none !important; }
+
+/* Clinical precision borders */
+.border-elegant { @apply border border-border-subtle; }
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 dark:bg-slate-800 rounded-full;
+}

@@ -1,0 +1,26 @@
+{
+  "eval_set_id": "materiality_eval_set",
+  "name": "Materiality Analysis Eval Set",
+  "description": "Tests the AnalystAgent materiality scoring accuracy.",
+  "eval_cases": [
+    {
+      "eval_id": "test_high_materiality",
+      "conversation": [
+        {
+          "invocation_id": "inv_1",
+          "user_content": { "parts": [{ "text": "analyze this regulation: All Digital Credit Providers must hold 100% liquidity." }] },
+          "final_response": {
+            "role": "model",
+            "parts": [{ "text": "Materiality score: 0.95. This is highly material." }]
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              { "name": "score_materiality", "args": { "content": "All Digital Credit Providers must hold 100% liquidity." } }
+            ]
+          }
+        }
+      ],
+      "session_input": { "app_name": "app", "user_id": "tester", "state": {} }
+    }
+  ]
+}

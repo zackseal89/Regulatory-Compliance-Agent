@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RegAI - Updates Feed</title>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#506ef7",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#0A0C10",
+                        "surface": "#111318",
+                        "border-subtle": "#1e222d",
+                        "success": "#10B981",
+                        "warning": "#F59E0B",
+                        "danger": "#EF4444",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #282b39; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-hidden">
+<div class="flex h-screen w-full">
+<!-- Side Navigation -->
+<aside class="w-64 flex flex-col bg-surface border-r border-border-subtle shrink-0">
+<div class="p-6 flex items-center gap-3">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white">shield_person</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-slate-100">RegAI</h1>
+</div>
+<nav class="flex-1 px-4 py-2 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary" href="#">
+<span class="material-symbols-outlined text-[22px] fill-current">notifications_active</span>
+<span class="text-sm font-medium">Updates Feed</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">smart_toy</span>
+<span class="text-sm font-medium">AI Assistant</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">group</span>
+<span class="text-sm font-medium">Client Profiles</span>
+</a>
+<div class="my-4 border-t border-border-subtle"></div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">notifications</span>
+<span class="text-sm font-medium">Notifications</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="p-4 mt-auto border-t border-border-subtle">
+<div class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-800/50 cursor-pointer">
+<div class="size-9 rounded-full bg-slate-700 bg-cover bg-center" data-alt="User profile avatar circle" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9tUbcBFXI4d2ulZG_2hvJfblx5QRrl7y5jjhJoyHDizQ70BQzfBPBLSG12fJJfj8sh14poJbSmEBz9wPEyU1U5Rwns016eKxgYasfZ8odojB3-Ls8i2JnUwYRuaAoRyA3HYjK8-PecvtlCRN3s7Ft77nTpdkPs_Cox9RpXwyZXN-vbifuDfsLePw9jewiBsfvQBnIIsj_DvKUpfu-rPWn0yYC9xqcBG2mwOBNmLVwdDEj58I4be1PlnsO2xJIUY-j6JNgcyTjm0E')"></div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-semibold truncate text-slate-100">Alex Compliance</p>
+<p class="text-xs text-slate-500 truncate">Admin Account</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-hidden">
+<!-- Header -->
+<header class="h-16 flex items-center justify-between px-8 border-b border-border-subtle bg-surface">
+<h2 class="text-xl font-bold text-slate-100">Updates Feed</h2>
+<div class="flex items-center gap-4">
+<button class="size-9 flex items-center justify-center rounded-lg text-slate-400 hover:bg-slate-800 border border-border-subtle">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                        Manual Update
+                    </button>
+</div>
+</header>
+<!-- Filters Bar -->
+<div class="px-8 py-4 bg-surface border-b border-border-subtle flex flex-wrap items-center gap-3">
+<div class="relative group">
+<button class="flex items-center gap-2 px-3 py-2 rounded-lg bg-background-dark border border-border-subtle text-slate-300 text-sm hover:border-primary/50 transition-colors">
+<span class="text-slate-500">Source:</span> ALL
+                        <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</div>
+<div class="relative">
+<button class="flex items-center gap-2 px-3 py-2 rounded-lg bg-background-dark border border-border-subtle text-slate-300 text-sm">
+<span class="text-slate-500">Level:</span> HIGH
+                        <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</div>
+<div class="relative">
+<button class="flex items-center gap-2 px-3 py-2 rounded-lg bg-background-dark border border-border-subtle text-slate-300 text-sm">
+<span class="material-symbols-outlined text-[18px] text-slate-500">calendar_today</span>
+                        Mar 01 - Mar 31, 2026
+                        <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</div>
+<div class="flex-1 min-w-[240px]">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-[20px]">search</span>
+<input class="w-full bg-background-dark border border-border-subtle rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-primary focus:border-primary text-slate-200" placeholder="Search updates, agencies, or client names..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Content Grid with Drawer -->
+<div class="flex-1 flex overflow-hidden">
+<!-- List of Cards -->
+<div class="flex-1 overflow-y-auto p-8 custom-scrollbar space-y-4">
+<!-- Card 1 (Active/Selected State) -->
+<div class="group relative bg-surface border-2 border-primary rounded-xl p-5 shadow-xl transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary/20 text-primary text-[10px] font-bold tracking-wider uppercase">Circular</span>
+<span class="text-xs text-slate-500">Mar 15, 2026</span>
+</div>
+<h3 class="text-lg font-bold text-slate-100 group-hover:text-primary transition-colors cursor-pointer">[CBK] Circular 15/2026 - Digital Credit Providers</h3>
+</div>
+<div class="flex flex-col items-end">
+<span class="bg-danger/20 text-danger px-3 py-1 rounded-full text-xs font-bold border border-danger/30 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">priority_high</span>
+                                    HIGH Score: 0.87
+                                </span>
+<span class="text-xs text-slate-500 mt-2">5 clients affected</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold">View Details</button>
+<button class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-4 py-2 rounded-lg text-sm font-semibold border border-border-subtle transition-colors">Override</button>
+<div class="flex -space-x-2 ml-auto">
+<div class="size-7 rounded-full border-2 border-surface bg-slate-600" data-alt="Client company logo placeholder" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAh5B8eI0zMvi0Ra5Do1xWUGo10FBmSMnQER14OZyb28hA_9THlKgwFz8rZFke9okDOpaiH-WLY1I4IYyKAm4kDX5tbsWGGR2KNHXJGWKes2s7pJHsOTaZOHr_9buaFpPBJlaxWtl4ka0vwOKLRlFg-Qms-hjP3HxfWKczK0XjbyPODLHDkfHHePhMcYKWN9Eti5XoBDqR8xYCgNSKAlPfGbC_qZeI-CwWyqGVBk5WNEPwVeHnuBLj5ZiA0lhbXmAPo01ohuJUFQlk')"></div>
+<div class="size-7 rounded-full border-2 border-surface bg-slate-500" data-alt="Client company logo placeholder" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxLa8NgQNli2d-giz70J8YtR-OTuy4w3-5rWRaVJZnbALyUQqAiuZkjOoUulIatktAxVco1Wyxmqn_TfNPaOTB2e9UON-gRj9gnEqSs40-zaMYMbZgHsaz234UMOQEbQKGXV9oBjiage6srs0G2k3iolmZwjVZN0sffZcgTwyAN8aUMThX-fTAJKSHkqKeDtMGOK619NhXUFHx2yeBnz-XKBKVNuUN3kNpyJrxU6pL6I1CSQBr7GwgwapO4Zu8Hg-WsoG2u-cmV44')"></div>
+<div class="size-7 rounded-full border-2 border-surface bg-slate-700 flex items-center justify-center text-[10px] text-white font-bold">+3</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface border border-border-subtle hover:border-slate-700 rounded-xl p-5 shadow-md transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-slate-800 text-slate-400 text-[10px] font-bold tracking-wider uppercase">Notice</span>
+<span class="text-xs text-slate-500">Mar 14, 2026</span>
+</div>
+<h3 class="text-lg font-bold text-slate-100 group-hover:text-primary transition-colors cursor-pointer">[CMA] Notice - REITs Amendment Regulations</h3>
+</div>
+<div class="flex flex-col items-end">
+<span class="bg-warning/20 text-warning px-3 py-1 rounded-full text-xs font-bold border border-warning/30">MEDIUM Score: 0.52</span>
+<span class="text-xs text-slate-500 mt-2">2 clients affected</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-4 py-2 rounded-lg text-sm font-semibold border border-border-subtle transition-colors">View Details</button>
+<button class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-4 py-2 rounded-lg text-sm font-semibold border border-border-subtle transition-colors">Override</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface border border-border-subtle hover:border-slate-700 rounded-xl p-5 shadow-md transition-all opacity-70">
+<div class="flex justify-between items-start mb-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-slate-800 text-slate-400 text-[10px] font-bold tracking-wider uppercase">Guidelines</span>
+<span class="text-xs text-slate-500">Mar 12, 2026</span>
+</div>
+<h3 class="text-lg font-bold text-slate-100">[EAC] Cross-border Payment Standard v2.1</h3>
+</div>
+<div class="flex flex-col items-end">
+<span class="bg-slate-800 text-slate-400 px-3 py-1 rounded-full text-xs font-bold border border-border-subtle">LOW Score: 0.18</span>
+<span class="text-xs text-slate-500 mt-2">0 clients affected</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Sidebar Drawer/Panel (Open) -->
+<div class="w-[450px] bg-surface border-l border-border-subtle flex flex-col shadow-2xl overflow-y-auto custom-scrollbar">
+<div class="p-6 border-b border-border-subtle flex items-center justify-between sticky top-0 bg-surface z-10">
+<h4 class="font-bold text-slate-100">Analysis Details</h4>
+<button class="text-slate-500 hover:text-slate-300">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-6 space-y-6">
+<!-- Source Link -->
+<div class="p-4 rounded-lg bg-background-dark border border-border-subtle flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-danger">picture_as_pdf</span>
+<div>
+<p class="text-sm font-medium text-slate-200">CBK_Circular_15_2026.pdf</p>
+<p class="text-xs text-slate-500">2.4 MB • Official Publication</p>
+</div>
+</div>
+<button class="text-primary text-xs font-bold flex items-center gap-1 hover:underline">
+                                OPEN PDF
+                                <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+<!-- Materiality per Client -->
+<div class="space-y-3">
+<h5 class="text-xs font-bold text-slate-500 uppercase tracking-widest">Materiality per Client</h5>
+<div class="overflow-hidden border border-border-subtle rounded-lg">
+<table class="w-full text-left text-sm">
+<thead class="bg-background-dark text-slate-400">
+<tr>
+<th class="px-4 py-2 font-medium">Client</th>
+<th class="px-4 py-2 font-medium">Impact</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle">
+<tr>
+<td class="px-4 py-3 text-slate-300">Acme Fintech</td>
+<td class="px-4 py-3"><span class="text-danger font-bold text-xs">● HIGH</span></td>
+</tr>
+<tr>
+<td class="px-4 py-3 text-slate-300">TelCo Kenya</td>
+<td class="px-4 py-3"><span class="text-slate-500 font-bold text-xs">● LOW</span></td>
+</tr>
+<tr>
+<td class="px-4 py-3 text-slate-300">Equity Bank</td>
+<td class="px-4 py-3"><span class="text-warning font-bold text-xs">● MED</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Agent Reasoning -->
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">psychology</span>
+<h5 class="text-xs font-bold text-slate-500 uppercase tracking-widest">Agent Reasoning</h5>
+</div>
+<div class="p-4 rounded-lg bg-primary/5 border border-primary/20">
+<p class="text-sm text-slate-300 leading-relaxed italic">
+                                    "This circular introduces mandatory capital requirements for Digital Credit Providers (DCPs). Based on Acme Fintech's current liquidity ratio (1.2), this regulation represents a critical compliance risk. The 30-day implementation window is significantly shorter than previous amendments, necessitating immediate board intervention."
+                                </p>
+</div>
+</div>
+<!-- Evidence Quoted -->
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-success text-[20px]">format_quote</span>
+<h5 class="text-xs font-bold text-slate-500 uppercase tracking-widest">Evidence Quoted</h5>
+</div>
+<div class="p-4 rounded-lg bg-slate-800/50 border-l-4 border-success">
+<p class="text-sm text-slate-400">
+                                    "...all licensed providers shall maintain a minimum core capital of <mark class="bg-success/30 text-success px-1 rounded">KES 50,000,000</mark> within thirty (30) days of this notice. Non-compliance will result in immediate <mark class="bg-danger/20 text-danger px-1 rounded">license suspension</mark>..."
+                                </p>
+<p class="text-[10px] text-slate-600 mt-2">— Section 4.2, Digital Credit Provider Act</p>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="pt-4 flex flex-col gap-3 sticky bottom-0 bg-surface pb-6 border-t border-border-subtle mt-8">
+<button class="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-lg font-bold text-sm shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">send</span>
+                                Approve Notification Draft
+                            </button>
+<button class="w-full bg-slate-800 hover:bg-slate-700 text-slate-300 py-3 rounded-lg font-bold text-sm border border-border-subtle transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+                                Override Score
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
